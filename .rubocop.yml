@@ -1,0 +1,167 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  Exclude:
+    - !ruby/regexp /(bin|tmp|node_modules|vendor)\/.*/
+  NewCops: enable
+  TargetRubyVersion: 3.0
+
+Metrics/AbcSize:
+  Enabled: true
+  Exclude:
+    - !ruby/regexp /db\/.*/
+
+Metrics/BlockLength:
+  Exclude:
+    - "db/**/*"
+
+Metrics/MethodLength:
+  CountAsOne:
+    - array
+    - hash
+  Exclude:
+    - !ruby/regexp /db\/.*/
+
+Layout/CommentIndentation:
+  Enabled: true
+
+Layout/ElseAlignment:
+  Enabled: true
+
+Layout/EmptyLineAfterMagicComment:
+  Enabled: true
+
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: true
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: true
+  Exclude:
+    - "db/schema.rb"
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: true
+
+Layout/EmptyLinesAroundMethodBody:
+  Enabled: true
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: true
+
+Layout/EndAlignment:
+  Enabled: true
+  EnforcedStyleAlignWith: variable
+  AutoCorrect: true
+
+Layout/HashAlignment:
+  Enabled: true
+  EnforcedHashRocketStyle: table
+
+Layout/LineLength:
+  Max: 120
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/TrailingWhitespace:
+  Enabled: true
+
+Lint/DeprecatedClassMethods:
+  Enabled: true
+
+Lint/RequireParentheses:
+  Enabled: true
+
+Lint/UriEscapeUnescape:
+  Enabled: true
+
+Lint/UselessAssignment:
+  Enabled: true
+
+Performance/FlatMap:
+  Enabled: true
+
+Performance/RedundantMerge:
+  Enabled: true
+
+Performance/StartWith:
+  Enabled: true
+
+Performance/EndWith:
+  Enabled: true
+
+Performance/ReverseEach:
+  Enabled: true
+
+Performance/UnfreezeString:
+  Enabled: true
+
+Rails/Output:
+  Enabled: true
+  Exclude:
+    - "db/seeds.rb"
+
+Style/AndOr:
+  Enabled: true
+
+Style/BlockDelimiters:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/ColonMethodCall:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: never
+
+Style/EmptyMethod:
+  Enabled: true
+  EnforcedStyle: expanded
+
+Style/HashSyntax:
+  Enabled: true
+
+Style/MethodDefParentheses:
+  Enabled: true
+
+Style/NumericLiterals:
+  Enabled: true
+  Exclude:
+    - "db/schema.rb"
+
+Style/ParenthesesAroundCondition:
+  Enabled: true
+
+Style/RedundantBegin:
+  Enabled: true
+
+Style/RedundantPercentQ:
+  Enabled: true
+
+Style/RedundantReturn:
+  Enabled: true
+  AllowMultipleReturnValues: true
+
+Style/Semicolon:
+  Enabled: true
+  AllowAsExpressionSeparator: true
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: single_quotes
+
+Style/SymbolArray:
+  Enabled: true
+  EnforcedStyle: brackets
+
+Style/WordArray:
+  Enabled: true
+  EnforcedStyle: brackets
